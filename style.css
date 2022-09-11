@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Esporte';
+    src: url(fontes/Esporte.otf) format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css2? family= Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700 & display=swap');
+
+/* Declarando variáveis para cor e fonte */
+:root {
+    --cor01: #D9666A;
+    --cor02: #D2232A;
+    --cor03: #9E1B1F;
+    --cor04: #520E10;
+    --cor05: #522262;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'Roboto Condensado', cursive;
+    --font-esporte: 'Esporte', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Degradê da imagem de fundo do body */
+    background-image: linear-gradient(to bottom, var(--cor01), var(--cor02));
+    font-family: var(--font-padrao);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor02), var(--cor04));
+    padding: 10px;
+    text-align: center;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--font-destaque);
+    font-size: 2.3em;
+    font-weight: bold;
+    padding: 5px;
+    /* Sombra no texto */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.582);
+}
+
+header > p {
+    color: white;
+    padding: 5px;
+}
+
+nav {
+    background-color: var(--cor04);
+    padding: 8px;
+    box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.404);
+}
+
+nav > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
+    transition-duration: 0.3s;
+}
+
+nav > a:hover {
+    background-color: var(--cor01);
+    color: var(--cor04);
+}
+
+main {
+    background-color: white;
+    /* Estabelecer as larguras min/max do main, para não ficar em toda tela */
+    min-width: 300px;
+    max-width: 800px;
+    /* Centralizar o main */
+    margin: auto;
+    /* Colocar margem entre o main e o footer */
+    margin-bottom: 10px;
+    padding: 10px;
+    /* Arredondar as bordas da parte de baixo */
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    /* Sombra */
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.404);
+
+}
+
+main h1 {
+    font-family: var(--font-esporte);
+    font-size: 2em;
+    font-weight: normal;
+}
+
+main h2 {
+    background-image: linear-gradient(to right, var(--cor01), transparent);
+    font-family: var(--font-esporte);
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+main p {
+    text-align: justify;
+    text-indent: 10px;
+    line-height: 1em;
+    margin: 10px;
+}
+
+main strong {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+main img {
+    width: 100%;
+}
+
+div.video {
+    background-color: black;
+    margin: 0px -10px 20px -10px;
+    /*
+    position: relative;
+    margin: 0px -10px 20px -10px;
+    padding: 10px;
+    padding-bottom: 56.5%;
+    */
+}
+
+div.video > iframe {
+    display: block;
+    margin: auto;
+    width: 100%; 
+
+    /*
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    */
+}
+
+aside {
+    background-color: var(--cor01);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+aside > ul {
+    list-style-position: inside;
+    columns: 2;
+}
+
+aside a {
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+    text-decoration: none;
+}
+
+aside a:hover {
+    color: var(--cor04);
+}
+
+footer {
+    background-image: linear-gradient(to bottom, var(--cor02), var(--cor04));
+    color: white;
+    padding: 3px;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+footer a:hover {
+    background-color: var(--cor01);
+    color: var(--cor04);
+}
